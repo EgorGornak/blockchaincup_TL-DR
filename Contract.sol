@@ -175,12 +175,21 @@ contract tokenVote is owned {
         }
     }
     
+    function clearProjects() private { // clear projects votes before the voting
+        for (uint32 i = 0; i < projectsVotes.length; i++) {
+            projectsVotes[i] = 0;
+            projects[projectsArray[i]] = 0;
+        }
+    }
+    
     function nextStep() public { // go to the next step of voting
         require (msg.sender == owner); // only owner can manipulate with voting steps
         require (currStep < 2); // check that current step isn`t terminal
         currStep++;
         if (currStep == 2) {
             checkVoters();
+        } else if (currStep == 1) {
+            clearProjects();
         }
     }
     
