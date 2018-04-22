@@ -1,10 +1,11 @@
 # blockchaincup_TL-DR
 
+Voting system on the Etherium API.
 
 Team: 
 - Artem Ustinov (t.me/eeerooock)
 
-- Egor Gornak (telegram: +7(965)814-89-72)
+- Egor Gornak (t.me/egor_gornak)
 
 - Arslan Aknazarov (t.me/Arimionim)
 
